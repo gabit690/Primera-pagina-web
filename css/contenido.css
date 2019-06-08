@@ -1,0 +1,223 @@
+/*CONTENIDO DE LA PAGINA*/
+
+#principal > section {
+    grid-area: contenido;
+    min-height: 400px;
+    width: 90%;
+    margin: 0% auto;
+    display: flex;
+    flex-flow: column;
+    
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section > h2 {
+    padding-top: 5%;
+    font-size: 2.0em;
+    text-align: center;
+}
+
+section > h3 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+section > p {
+    padding: 5% 0%;
+    font-size: 1.0em;
+    text-align: justify;
+}
+
+section > img {
+    width: 70%;
+    align-self: center;
+}
+
+/* Finaliza el contenido de la pagina inicial */
+
+section > .seed {   /* Icono para la busqueda sin resultados */
+    padding-top: 2.5%;
+    font-size: 8.0em;
+    color: #142d4c8c;
+    align-self: center;
+}
+
+/* paginas que muestran resultados de una busqueda */
+
+.info_min > a{
+    margin-bottom: 5%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border: 4px solid #142d4c;
+}
+
+.info_min > a > .descripcion_min {
+    margin: 2% 0%;
+    width: 90%;
+    color: black;
+}
+
+.descripcion_min > h4 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.descripcion_min > p {
+    margin-top: 3%;
+    font-size: 1.0em;
+    text-align: justify;
+}
+
+.info_min > a > .img_min {
+    margin-bottom: 2%;
+    width: 100px;
+    height: 100px;
+}
+
+section > .paginador {
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+/* paginas que muestran la informacion de algun resultado seleccionado de la busqueda */
+
+section > .info_max {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-self: center;
+}
+
+.info_max > .datos {
+    font-size: 1.0em;
+    margin: 3% 0%;
+}
+
+.info_max > .img_max {
+    height: 200px;
+    width: 200px;
+}
+
+section > .descripcion_max {
+    font-size: 1.0em;
+    text-align: justify;
+}
+
+section > .contacto {
+    width: 100%;
+    margin-bottom:5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contacto > a {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border: 3px solid black;
+    border-radius: 50px;
+    color: #f3f9fb;
+}
+
+.contacto > .btn_twitter {
+    background: #00acee;
+}
+
+.contacto > .btn_facebook {
+    background: #3b5998;
+}
+
+.contacto > .btn_instagram {
+    background: #dd2a7b;
+}
+
+.contacto > .btn_youtube {
+    background: #c4302b;
+}
+
+.contacto > .btn_web {
+    background: #f89d13;
+}
+
+.contacto > .boton:hover {
+    transform: rotate(360deg);
+    transition: transform 3s;
+}
+
+
+/* Formularios la pagina */
+
+section > #form_contacto {
+    width: 90%;
+    margin-bottom:3%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    align-self: center;
+}
+
+#form_contacto > .form_campo {
+    display: flex;
+    flex-flow: column;
+    margin-bottom:3%;
+}
+
+#form_contacto > .btn_enviar {
+    padding: 1% 2%;
+}
+
+section > #form_colaboracion {
+    width: 90%;
+    margin-bottom:3%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    align-self: center;
+}
+
+#form_colaboracion > .form_campo {
+    display: flex;
+    flex-flow: column;
+    margin-bottom:3%;
+}
+
+#form_colaboracion > .form_seleccion {
+    display: flex;
+    flex-flow: column;
+    margin: 3% 0%;
+}
+
+.form_seleccion > .form_check {
+    margin-bottom: 5%;    
+}
+
+.form_check > h3 {
+    padding-bottom: 10%;
+}
+
+.form_check > p {
+    padding-bottom: 15%;
+}
+
+.form_radio > p {
+    padding-bottom: 15%;
+}
+
+.form_radio > h3 {
+    padding-bottom: 10%;
+}
+
+#form_colaboracion > .form_botones {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_botonoes > .btn_reset, .form_botones > .btn_enviar {
+    padding: 1% 1%;
+}

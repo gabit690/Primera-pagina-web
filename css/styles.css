@@ -1,0 +1,157 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: #f3f9fb;
+}
+
+#principal {
+    /* SOLUCIONAR: evitar que se vea el espacio sobrante cuando el contenido vertical de la pagina es menor al tamaño de la pantalla */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header" "menu" "contenido" "footer";
+}
+
+/* ENCABEZADO DE LA PAGINA*/
+
+#principal > header {
+    grid-area: header;
+    font-family: 'Bitter', serif;
+    background: #142d4c;
+}
+
+header > #titulo_principal {
+    width: 85%;
+    margin: 0 auto;
+    padding: 3% 0%;
+    display: flex;
+    justify-content: center;
+}
+
+#titulo_principal > h1 {
+    width: 78%;
+    margin: 0% 0%;
+    text-align: center;
+    color: #f3f9fb;
+    font-size: 10.0vw;
+}
+
+h1 > span {
+    color: #00b906;
+    text-decoration: underline;
+}
+
+#titulo_principal > #logo {
+    width: 20vw;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+#titulo_principal > #logo:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    transition: filter 3s;
+}
+
+/*MENU DE LA PAGINA*/
+
+#principal > nav {
+    grid-area: menu;
+    background: #00b906;
+}
+
+nav > #menu_principal {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    font-weight: bold;
+}
+
+#menu_principal > li, .submenu > li {
+    border-bottom: 3px solid #142d4c73;
+}
+
+#menu_principal > li > a, 
+.submenu > li > a {
+    display: block;
+    padding: 2% 0%;
+    font-size: 1.3em;
+    color: #142d4c;
+}
+
+#menu_principal > li > .submenu {
+    background: #f3f9fb;
+    display: none;
+}
+
+.submenu > li > a {
+    font-weight: initial;
+}
+
+#menu_principal > li > a:hover {
+    color: #f3f9fb;
+    transition: color 1s;
+    -webkit-transition: color 1s;
+}
+
+#menu_principal > li:hover > .submenu{
+    display: block;
+}
+
+.submenu > li > a:hover {
+    color: #00b906;
+}
+
+/*RED SOCIAL DE LA PAGINA*/
+
+#principal > aside {
+    min-height: 550px;
+    display: none;
+    background: #142d4c8c;
+}
+
+aside > h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+}
+
+/*FOOTER DE LA PAGINA*/
+
+#principal > footer {
+    grid-area: footer;
+    background: #142d4c;
+    font-family: 'Ubuntu', sans-serif;
+    color: #f3f9fb;
+}
+
+footer > cite {
+    display: block;
+    padding: 2.5% 2% 0% 2%;
+    font-size: .9em;
+    text-align: center;
+    font-style: italic;
+}
+
+footer > #autor_frase {
+    margin: 2.5% 2% 2.5% 2%;
+    font-size: 1.0em;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer > #derechos {
+    margin: 2.5% 2% 2.5% 2%;
+    font-size: 1.0em;
+    text-align: center;
+}
+
+#derechos > a {
+    font-weight: bold;
+    color: #00b906;
+}

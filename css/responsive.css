@@ -1,0 +1,315 @@
+@media (min-width:600px){
+    #principal {
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "header" "menu" "contenido" "redes" "footer";
+    }
+
+/*Encabezado de la pagina*/
+    
+    #titulo_principal > h1 {
+        width: 65%;
+        font-size: 8.0vw;
+    }
+    
+    #titulo_principal > #logo {
+        width: 15vw;
+    }
+
+    /*Menu de la pagina*/
+
+    nav > #menu_principal {
+        flex-flow: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #menu_principal > li, .submenu > li {
+        border-bottom: 0px solid #142d4c73;
+    }
+
+    #menu_principal > li > a {  
+        display: block;
+        margin: 10% 0%;
+        font-size: 1.2em;
+    }
+
+    #menu_principal > #btn_ubicacion:hover > .submenu {
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        width: 60%;
+        background: #142d4c;
+    }
+
+    #menu_principal > #btn_activismos:hover > .submenu {
+        position: absolute;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 40%;
+        background: #142d4c;
+    }
+
+
+    .submenu > li > a {  
+        margin: 5% 0%;
+        font-size: 0.8em;
+        color: #f3f9fb;
+    }
+
+
+    /*CONTENIDO DE LA PAGINA*/
+
+    section > p {
+        font-size: 1.1em;
+    }
+
+    section > img {
+        width: 80%;
+    }
+
+    section > .seed {   /* Icono para la busqueda sin resultados */
+        font-size: 10.0em;
+        color: #142d4c;
+    }
+
+    .descripcion_min > p {
+        font-size: 1.1em;
+    }
+
+    section > #form_contacto, 
+    #form_contacto > .btn_enviar {
+        font-size: 1.1em;
+    }
+
+    section > #form_colaboracion, 
+    .form_botones > .btn_enviar,
+    .form_botones > .btn_reset {
+        font-size: 1.1em;
+    }
+
+    /*Visualizar redes*/
+
+    #principal > aside {
+        grid-area: redes;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    /*FOOTER DE LA PAGINA*/
+
+    footer > cite {
+        font-size: 1.0em;
+    }
+
+    footer > #autor_frase {
+        margin: 0% 2% 2.0% 2%;
+        font-size: 1.1em;
+        text-align: right;
+    }
+
+    footer > #derechos {
+        margin: 2.0% 2% 2.0% 2%;
+        font-size: 1.1em;
+    }
+
+    #derechos > a {
+        color: #00b906;
+    }
+
+}
+
+@media (min-width:800px){
+
+    header > #titulo_principal {
+        padding: 2% 0%;
+    }
+
+    #titulo_principal > h1 {
+        width: 50%;
+        font-size: 6.0vw;
+    }
+    
+    #titulo_principal > #logo {
+        width: 11vw;
+    }
+
+    #menu_principal > #btn_ubicacion:hover > .submenu {
+        width: 50%;
+    }
+
+    #menu_principal > #btn_activismos:hover > .submenu {
+        width: 30%;
+    }
+
+
+    /* campos de formulario de colaboracion*/
+    
+    #form_colaboracion > .form_campo {
+        flex-flow: row;
+        margin-bottom:2%;
+    }
+    
+    #form_colaboracion > .form_seleccion {
+        width: 60%;
+        flex-flow: row;
+        justify-content: space-evenly;
+        margin: 0% 0%;
+    }
+    
+    .form_seleccion > .form_check {
+        margin-bottom: 2%;    
+    }
+    
+    #form_colaboracion > .form_botonoes {
+        width: 50%;
+        flex-flow: row;
+        justify-content: space-evenly;
+    }
+    
+    .form_botonoes > .btn_enviar{
+        margin-bottom: 7%;
+    }
+
+    .form_botonoes > .btn_reset{
+        margin-bottom: 7%;
+    }
+
+    /* resultados de las busquedas por secciones*/
+
+    .info_min > a{
+        margin-bottom:2%;
+        padding: 2% 2%;
+        display: flex;
+        flex-flow: row-reverse;
+        align-items: center;
+    }
+    
+    .info_min > a > .descripcion_min {
+        margin: 0% 0%;
+    }
+    
+    .descripcion_min > p {
+        margin: 2% 2% 0% 2%;
+    }
+    
+    .info_min > a > .img_min {
+        margin-bottom: 0%;
+    }
+    
+    section > .paginador {
+        margin-bottom: 3%;
+    }
+
+    /* Descripcion ampliada de una agrupacion seleccionada*/
+
+    section > .info_max {
+        width: 80%;
+        padding-top: 2%; 
+        flex-flow: row;
+        justify-content: space-evenly;
+    }
+    
+    .info_max > .datos {
+        font-size: 1.2em;
+    }
+    
+    section > .descripcion_max {
+        font-size: 1.2em;
+    }
+    
+}
+
+@media (min-width:1100px){
+
+    #principal {
+        display: grid;
+        grid-template-columns: 4fr 2fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "header header" "menu menu" "contenido redes" "footer footer";
+    }
+
+    /*Encabezado de la pagina*/
+    
+    header > #titulo_principal {
+        padding: 1% 0%;
+    }
+
+    #titulo_principal > h1 {
+        font-size: 6.0vw;
+    }
+    
+
+    /*Menu de la pagina*/
+
+
+    #menu_principal > li > a {
+        font-size: 1.5em;
+    }
+
+    .submenu > li > a {  
+        font-size: 1.0em;
+    }
+
+
+    /*CONTENIDO DE LA PAGINA*/
+
+    section > p {
+        font-size: 1.2em;
+    }
+
+    section > .seed {   /* Icono para la busqueda sin resultados */
+        font-size: 14.0em;
+        color: #00b906;
+    }
+
+    .descripcion_min > p {
+        font-size: 1.2em;
+    }
+
+    section > #form_contacto, 
+    #form_contacto > .btn_enviar {
+        font-size: 1.2em;
+    }
+
+    section > #form_colaboracion, 
+    .form_botones > .btn_enviar,
+    .form_botones > .btn_reset {
+        font-size: 1.2em;
+    }
+
+
+    /*Redes */
+
+    aside {
+     display: flex;
+     justify-items: center;   
+    }
+
+    aside > #aside_contenido {
+        height: 90%;
+    }
+
+
+    /*FOOTER DE LA PAGINA*/
+
+    footer > cite {
+        font-size: 1.2em;
+    }
+
+    footer > #autor_frase {
+        font-size: 1.3em;
+    }
+
+    footer > #derechos {
+        margin: 1.0% 2% 1.0% 2%;
+        font-size: 1.3em;
+    }
+
+    #derechos > a {
+        color: #00b906;
+    }
+}
