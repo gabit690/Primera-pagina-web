@@ -6,69 +6,69 @@
 
 /*Encabezado de la pagina*/
     
-    #titulo_principal > h1 {
-        width: 65%;
-        font-size: 8.0vw;
+    header > a > h1 {
+        font-size: 3.0em;
     }
     
-    #titulo_principal > #logo {
-        width: 15vw;
+    header > a > #logo {
+        width: 100px;
+        margin-left: 5px;
     }
 
     /*Menu de la pagina*/
-
+    
     nav > #menu_principal {
         flex-flow: row;
         justify-content: space-evenly;
         align-items: center;
     }
-
+    
     #menu_principal > li, .submenu > li {
         border-bottom: 0px solid #142d4c73;
     }
 
-    #menu_principal > li > a {  
-        display: block;
-        margin: 10% 0%;
-        font-size: 1.2em;
+    #menu_principal > li > a {
+        margin: 15% 0%;
+        font-size: 1.3em;
+        color: #22267b;
     }
 
-    #menu_principal > #btn_ubicacion:hover > .submenu {
+    .submenu > li > a {
+        margin: 0% 0%;
+        font-size: 1.1em;
+        color: #f3f9fb;
+    } 
+
+    /* Hay algun problema de jerarquia y tengo que utilizar el primer id sino no funciona. */
+    #menu_principal > #ubicacion:hover > .submenu {
         position: absolute;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
-        width: 60%;
-        background: #142d4c;
+        width: 75%;
+        background: #22267b;
     }
 
-    #menu_principal > #btn_activismos:hover > .submenu {
+    #menu_principal > #activismos:hover > .submenu {
         position: absolute;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 40%;
-        background: #142d4c;
-    }
-
-
-    .submenu > li > a {  
-        margin: 5% 0%;
-        font-size: 0.8em;
-        color: #f3f9fb;
+        width: 50%;
+        background: #22267b;
     }
 
 
     /*CONTENIDO DE LA PAGINA*/
 
-    section > p {
+    section > div > p {
         font-size: 1.1em;
     }
 
-    section > img {
+    section > div > img {
         width: 80%;
     }
 
-    section > .seed {   /* Icono para la busqueda sin resultados */
+    #noHayGrupos>.seed, #errorBusqueda>.lupaInvalida {   /* Icono para la busqueda sin resultados */
         font-size: 10.0em;
         color: #142d4c;
     }
@@ -77,15 +77,24 @@
         font-size: 1.1em;
     }
 
-    section > #form_contacto, 
+    #hayResultados, #noHayGrupos, #errorBusqueda {
+        font-size: 1.1em;
+    }
+    #contacto > #form_contacto, 
     #form_contacto > .btn_enviar {
         font-size: 1.1em;
     }
 
-    section > #form_colaboracion, 
+    #colaboracion > #form_colaboracion, 
     .form_botones > .btn_enviar,
     .form_botones > .btn_reset {
         font-size: 1.1em;
+    }
+
+    .contacto > a {
+        height: 50px;
+        width: 50px;
+        font-size: 1.7em;
     }
 
     /*Visualizar redes*/
@@ -121,42 +130,42 @@
 
 }
 
-@media (min-width:800px){
+@media (min-width:900px){
 
-    header > #titulo_principal {
+    header > a > h1 {
+        font-size: 4.0em;
         padding: 2% 0%;
     }
-
-    #titulo_principal > h1 {
-        width: 50%;
-        font-size: 6.0vw;
-    }
     
-    #titulo_principal > #logo {
-        width: 11vw;
+    header > a > #logo {
+        width: 120px;
     }
 
-    #menu_principal > #btn_ubicacion:hover > .submenu {
+    #menu_principal > #ubicacion:hover > .submenu {
         width: 50%;
     }
 
-    #menu_principal > #btn_activismos:hover > .submenu {
-        width: 30%;
+    #menu_principal > #activismos:hover > .submenu {
+        width: 35%;
     }
 
+    #resultados > a{
+        flex-flow: row-reverse;
+    }
 
     /* campos de formulario de colaboracion*/
-    
+
     #form_colaboracion > .form_campo {
         flex-flow: row;
         margin-bottom:2%;
     }
     
     #form_colaboracion > .form_seleccion {
-        width: 60%;
+        width: 70%;
         flex-flow: row;
         justify-content: space-evenly;
         margin: 0% 0%;
+        
     }
     
     .form_seleccion > .form_check {
@@ -178,51 +187,40 @@
     }
 
     /* resultados de las busquedas por secciones*/
-
-    .info_min > a{
-        margin-bottom:2%;
-        padding: 2% 2%;
-        display: flex;
-        flex-flow: row-reverse;
-        align-items: center;
-    }
     
-    .info_min > a > .descripcion_min {
-        margin: 0% 0%;
+    #resultados > .info_min{
+        margin-bottom:2%;
+        padding: 2% 2%; 
     }
     
     .descripcion_min > p {
         margin: 2% 2% 0% 2%;
     }
     
-    .info_min > a > .img_min {
+    #resultados > a > .img_min {
         margin-bottom: 0%;
-    }
-    
-    section > .paginador {
-        margin-bottom: 3%;
     }
 
     /* Descripcion ampliada de una agrupacion seleccionada*/
 
-    section > .info_max {
-        width: 80%;
+    article > .info_max {
+        width: 100%;
         padding-top: 2%; 
         flex-flow: row;
         justify-content: space-evenly;
     }
     
     .info_max > .datos {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     
-    section > .descripcion_max {
-        font-size: 1.2em;
+    article > .descripcion_max {
+        font-size: 1.1em;
     }
     
 }
 
-@media (min-width:1100px){
+@media (min-width:1200px){
 
     #principal {
         display: grid;
@@ -233,17 +231,27 @@
     }
 
     /*Encabezado de la pagina*/
-    
-    header > #titulo_principal {
-        padding: 1% 0%;
-    }
 
-    #titulo_principal > h1 {
-        font-size: 6.0vw;
+    header > a > h1 {
+        font-size: 5.0em;
     }
     
+    header > a > #logo {
+        width: 160px;
+    }
 
     /*Menu de la pagina*/
+
+    #principal > nav {
+        display: flex;
+        flex-flow: row-reverse;
+    }
+    
+    nav > #buscador {
+        padding: 1.5% 0%;
+        width: 30%;
+        border-bottom: 0px solid #22267b;
+    }
 
 
     #menu_principal > li > a {
@@ -251,48 +259,45 @@
     }
 
     .submenu > li > a {  
-        font-size: 1.0em;
+        font-size: 1.3em;
     }
-
 
     /*CONTENIDO DE LA PAGINA*/
 
-    section > p {
-        font-size: 1.2em;
-    }
 
-    section > .seed {   /* Icono para la busqueda sin resultados */
+    #noHayGrupos>.seed, #errorBusqueda>.lupaInvalida {   /* Icono para la busqueda sin resultados */
         font-size: 14.0em;
         color: #00b906;
     }
 
-    .descripcion_min > p {
-        font-size: 1.2em;
-    }
-
-    section > #form_contacto, 
+    #contacto > #form_contacto, 
     #form_contacto > .btn_enviar {
         font-size: 1.2em;
     }
 
-    section > #form_colaboracion, 
+    #colaboracion > #form_colaboracion, 
     .form_botones > .btn_enviar,
     .form_botones > .btn_reset {
         font-size: 1.2em;
     }
 
+    /* Comentarios */
+
+    #configComentario {
+        display: flex;
+    }
+
+    #comentarios {
+        display: inline;
+    }
 
     /*Redes */
 
-    aside {
+    #principal aside {
      display: flex;
-     justify-items: center;   
+     justify-items: center;
+     height: 100%;
     }
-
-    aside > #aside_contenido {
-        height: 90%;
-    }
-
 
     /*FOOTER DE LA PAGINA*/
 

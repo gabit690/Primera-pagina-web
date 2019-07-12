@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Argentina Activista | Agrupaciones Argentinas que luchando por sus derechos.</title>
+    <title>Argentina Activista | Agrupaciones Argentinas luchando por sus derechos.</title>
+    <link rel="icon" href="img/logoIcon.png">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/contenido.css">
@@ -14,138 +15,149 @@
 <body>
     <div id="principal">
         <header>
-            <div id="titulo_principal">
-                <h1>ARGENTINA <span>ACTIVISTA</span></h1>
-                <img id="logo" src="img/Logo.svg" alt="logoArgentac">
-            </div>
+            <a href="index.html">
+                <h1>
+                    <p>ARGENTINA</p>
+                    <p><span>ACTIVISTA</span></p>
+                </h1>
+                <img id="logo" src="img/logo.svg" alt="logoArgentac">
+            </a>
         </header>
         <nav>
+            <div id="buscador">
+                <input type="text" name="busqueda" id="busqueda" placeholder="Buscar..." maxlength="25">
+                <button id="lupa"><i class="fas fa-search"></i></button>
+            </div>
             <ul id="menu_principal">
-                <li id="btn_inicio"><a href="index.html">Inicio</a></li>
-                <li id="btn_ubicacion"> <a href="#">Ubicación <i class="fas fa-angle-down"></i></a>
+                <li><a id="btn_inicio" href="index.html">Inicio</a></li>
+                <li id="ubicacion"><a id="btn_ubicacion">Ubicación <i class="fas fa-angle-down"></i></a>
                     <ul class="submenu">              
-                        <li class="menu_item"><a href="caba1.html">Ciudad Autónoma de Buenos Aires</a></li>
-                        <li class="menu_item"><a href="#">Gran Buenos Aires</a></li>
-                        <li class="menu_item"><a href="#">Córdoba</a></li>
-                        <li class="menu_item"><a href="#">Santa Fé</a></li>
-                        <li class="menu_item"><a href="#">Neuquén</a></li>
-                        <li class="menu_item"><a href="#">Catamarca</a></li>
-                        <li class="menu_item"><a href="#">Chaco</a></li>
-                        <li class="menu_item"><a href="#">Chubut</a></li>
-                        <li class="menu_item"><a href="#">Corrientes</a></li>
-                        <li class="menu_item"><a href="#">Entre Ríos</a></li>
-                        <li class="menu_item"><a href="#">Formosa</a></li>
-                        <li class="menu_item"><a href="#">Jujuy</a></li>
-                        <li class="menu_item"><a href="#">La Pampa</a></li>
-                        <li class="menu_item"><a href="#">La Rioja</a></li>
-                        <li class="menu_item"><a href="#">Mendoza</a></li>
-                        <li class="menu_item"><a href="#">Misiones</a></li>
-                        <li class="menu_item"><a href="#">Rio Negro</a></li>
-                        <li class="menu_item"><a href="#">Salta</a></li>
-                        <li class="menu_item"><a href="#">San Juan</a></li>
-                        <li class="menu_item"><a href="#">San Luis</a></li>
-                        <li class="menu_item"><a href="#">Santa Cruz</a></li>
-                        <li class="menu_item"><a href="#">Santiago del Estero</a></li>
-                        <li class="menu_item"><a href="tucuman.html">Tucuman</a></li>
-                        <li class="menu_item"><a href="#">Tierra del Fuego</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('capitalfederal')">Capital Federal</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('buenosaires')">Buenos Aires</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('cordoba')">Córdoba</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('santafe')">Santa Fé</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('neuquen')">Neuquén</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('catamarca')">Catamarca</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('chaco')">Chaco</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('chubut')">Chubut</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('corrientes')">Corrientes</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('entrerios')">Entre Ríos</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('formosa')">Formosa</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('jujuy')">Jujuy</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('lapampa')">La Pampa</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('larioja')">La Rioja</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('mendoza')">Mendoza</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('misiones')">Misiones</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('rionegro')">Rio Negro</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('salta')">Salta</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('sanjuan')">San Juan</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('sanluis')">San Luis</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('santacruz')">Santa Cruz</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('santiagodelestero')">Santiago del Estero</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('tucuman')">Tucuman</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('tierradelfuego')">Tierra del Fuego</a></li>
                     </ul>
                 </li>
-                <li id="btn_activismos"> <a href="#">Activismos <i class="fas fa-angle-down"></i></a> 
+                <li id="activismos"><a id="btn_activismos">Activismos <i class="fas fa-angle-down"></i></a> 
                     <ul class="submenu">
-                        <li class="menu_item"><a href="#">Derechos Humanos</a></li>
-                        <li class="menu_item"><a href="#">Ambiental</a></li>
-                        <li class="menu_item"><a href="#">Feminista</a></li>
-                        <li class="menu_item"><a href="#">LGBTIQ+</a></li>
-                        <li class="menu_item"><a href="#">Veganismo</a></li>
-                        <li class="menu_item"><a href="animalista.html">Animalista</a></li>
-                        <li class="menu_item"><a href="#">Cannábico</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('derechoshumanos')">Derechos Humanos</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('ambiental')">Ambiental</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('feminismo')">Feminista</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('lgbtiq+')">LGBTIQ+</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('veganismo')">Veganismo</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('animalista')">Animalista</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('cannabico')">Cannábico</a></li>
                     </ul>
                 </li>
-                <li id="btn_colaboracion"> <a href="colaboracion.html">Colaborar</a></li>
-                <li id="btn_contacto"> <a href="contacto.html">Contactar</a></li>
+                <li> <a id="btn_colaboracion" href="colaboracion.html">Colaborar</a></li>
+                <li> <a id="btn_contacto" href="contacto.html">Contactar</a></li>
             </ul>
         </nav>
         <section>
-            <h2>Colaboración</h2>
-            <p>Queremos sumar a la mayor cantidad de agrupaciones posibles en la página. Los datos que nos pueda proporcionar serán de mucha ayuda para lograrlo.</p>
-            <form id="form_colaboracion" action="gabit690@gmaill.com">
-                <div class="form_campo">
-                    <label for="agrupacion">Agrupación:</label>
-                    <input type="text" placeholder="Ingrese el nombre" id="agrupacion" minlength="6" maxlength="50" required>
-                </div>
-                <div class="form_campo">
-                    <label for="ubicacion">Ubicación:</label>
-                    <select id="ubicacion" name="ubicacion">
-                        <option selected>Ciudad De Buenos Aires</option>
-                        <option>Gran Buenos Aires</option>
-                        <option>Córdoba</option>
-                        <option>La Pampa</option>
-                        <option>Tucumán</option>
-                        <option>Santa Fé</option>
-                        <option>Neuquén</option>
-                        <option>Catamarca</option>
-                        <option>Chaco</option>
-                        <option>Chubut</option>
-                        <option>Corrientes</option>
-                        <option>Entre Ríos</option>
-                        <option>Formosa</option>
-                        <option>Jujuy</option>
-                        <option>La Rioja</option>
-                        <option>Mendoza</option>
-                        <option>Misiones</option>
-                        <option>Rio Negro</option>
-                        <option>Salta</option>
-                        <option>San Juan</option>
-                        <option>San Luis</option>
-                        <option>Santa Cruz</option>
-                        <option>Santiago del Estero</option>
-                        <option>Tierra del Fuego</option>
-                    </select>
-                </div>
-                <div class="form_seleccion">
-                    <div class="form_check">
-                        <h3>Activismo:</h3>
-                        <p>DDHH <input type="checkbox" name="activismos"></p>
-                        <p>Ambiental <input type="checkbox" name="activismos"></p>
-                        <p>Feminista <input type="checkbox" name="activismos"></p>
-                        <p>Lgbtiq+ <input type="checkbox" name="activismos"></p>
-                        <p>Veganismo <input type="checkbox" name="activismos"></p>
-                        <p>Animalista <input type="checkbox" name="activismos"></p>
-                        <p>Cannabico <input type="checkbox" name="activismos"></p>
-                        <p>Otro <input type="checkbox" name="activismos"></p>
+            <div id="colaboracion">
+                <h2>Colaboración</h2>
+                <p>Queremos sumar a la mayor cantidad de agrupaciones posibles en la página. Los datos que nos pueda proporcionar serán de mucha ayuda para lograrlo.</p>
+                <form id="form_colaboracion" action="gabit690@gmaill.com">
+                    <div class="form_campo">
+                        <label for="agrupacion">Agrupación: </label>
+                        <input type="text" placeholder="Ingrese el nombre" id="agrupacion" minlength="6" maxlength="50" required>
                     </div>
-                    <div class="form_radio">
-                        <h3>Organizacion:</h3>
-                        <p>Vertical <input type="radio" name="organizacion" value="tipo_orga"></p>
-                        <p>Horizontal <input type="radio" name="organizacion" value="tipo_orga"></p>
-                        <p>Otra <input type="radio" name="organizacion" value="tipo_orga"></p>
+                    <div class="form_campo">
+                        <label for="ubicacion">Ubicación: </label>
+                        <select id="ubicacion" name="ubicacion">
+                            <option selected>Ciudad De Buenos Aires</option>
+                            <option>Gran Buenos Aires</option>
+                            <option>Córdoba</option>
+                            <option>La Pampa</option>
+                            <option>Tucumán</option>
+                            <option>Santa Fé</option>
+                            <option>Neuquén</option>
+                            <option>Catamarca</option>
+                            <option>Chaco</option>
+                            <option>Chubut</option>
+                            <option>Corrientes</option>
+                            <option>Entre Ríos</option>
+                            <option>Formosa</option>
+                            <option>Jujuy</option>
+                            <option>La Rioja</option>
+                            <option>Mendoza</option>
+                            <option>Misiones</option>
+                            <option>Rio Negro</option>
+                            <option>Salta</option>
+                            <option>San Juan</option>
+                            <option>San Luis</option>
+                            <option>Santa Cruz</option>
+                            <option>Santiago del Estero</option>
+                            <option>Tierra del Fuego</option>
+                        </select>
                     </div>
-                </div>
-                <div class="form_campo">
-                    <label for="cuenta_twitter">Twitter:</label>
-                    <input type="text" id="cuenta_twitter">
-                </div>
-                <div class="form_campo">
-                    <label for="cuenta_facebook">Facebook:</label>
-                    <input type="text" id="cuenta_facebook">
-                </div>
-                <div class="form_campo">
-                    <label for="cuenta_instagram">Instagram:</label>
-                    <input type="text" id="cuenta_instagram">
-                </div>
-                <div class="form_campo">
-                    <label for="cuenta_youtube">Youtube:</label>
-                    <input type="text" id="cuenta_youtube">
-                </div>
-                <div class="form_campo">
-                    <label for="cuenta_web">Página web:</label>
-                    <input type="text" id="cuenta_web">
-                </div>
-                <div class="form_botones">
-                    <input class="btn_reset" type="reset" value="Reiniciar">
-                    <input class="btn_enviar" type="submit" value="Enviar">
-                </div>
-            </form>       
+                    <div class="form_seleccion">
+                        <div id="activismos">
+                            <h3>Activismo: </h3>
+                            <p><input type="radio" name="activismos" required> DDHH</p>
+                            <p><input type="radio" name="activismos"> Ambiental</p>
+                            <p><input type="radio" name="activismos"> Feminista</p>
+                            <p><input type="radio" name="activismos"> Lgbtiq+</p>
+                            <p><input type="radio" name="activismos"> Veganismo</p>
+                            <p><input type="radio" name="activismos"> Animalista</p>
+                            <p><input type="radio" name="activismos"> Cannabico</p>
+                        </div>
+                        <div id="oragnizacion">
+                            <h3>Organizacion: </h3>
+                            <p>Jerárquica <input type="radio" name="organizacion" required></p>
+                            <p>Horizontal <input type="radio" name="organizacion"></p>
+                        </div>
+                    </div>
+                    <div class="form_campo orga">
+                        <label for="descripcionGrupo">Objetivo: </label>
+                        <textarea name="descripcionMin" id="descripcionGrupo" cols="20" rows="10" placeholder="Objetivo del grupo." maxlength="100" required></textarea>
+                    </div>
+                    <div class="form_campo">
+                        <label for="cuenta_twitter">Twitter: </label>
+                        <input type="text" id="cuenta_twitter">
+                    </div>
+                    <div class="form_campo">
+                        <label for="cuenta_facebook">Facebook: </label>
+                        <input type="text" id="cuenta_facebook">
+                    </div>
+                    <div class="form_campo">
+                        <label for="cuenta_instagram">Instagram: </label>
+                        <input type="text" id="cuenta_instagram">
+                    </div>
+                    <div class="form_campo">
+                        <label for="cuenta_youtube">Youtube: </label>
+                        <input type="text" id="cuenta_youtube">
+                    </div>
+                    <div class="form_campo">
+                        <label for="cuenta_web">Página web: </label>
+                        <input type="text" id="cuenta_web">
+                    </div>
+                    <div class="form_botones">
+                        <input class="btn_reset" type="reset" value="Reiniciar">
+                        <input class="btn_enviar" type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
         </section>
         <aside>
             <h3>Organización destacada del mes.</h3>
@@ -154,10 +166,16 @@
         </aside>
         <footer>
             <cite>"Cuestionar nuestras más arraigadas creencias requiere de mucho coraje porque implica aceptar que hemos podido estar equivocados toda la vida".</cite>
-            <p id="autor_frase">David Fischman</p>
-            <p id="derechos">2019 Derechos reservados. Autor de la pagina <a href="#">Gabit<i class="far fa-hand-peace"></i> </a></p>
+            <p id="autor_frase">David Fischman.</p>
+            <p id="derechos">2019 Derechos reservados. Autor de la pagina <a href="https://github.com/gabit690" target="_blank">Gabit<i class="far fa-hand-peace"></i> </a></p>
         </footer>
     </div>
+    <div id="ir-arriba">
+        <i class="fas fa-arrow-up"></i>
+    </div>
     <script src="js/all.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/buscador.js"></script>
+    <script src="js/subir.js"></script>
 </body>
 </html>

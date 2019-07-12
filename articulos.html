@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Argentina Activista | Agrupaciones Argentinas luchando por sus derechos.</title>
+    <link rel="icon" href="img/logoIcon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contenido.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="principal">
+        <header>
+            <a href="index.html">
+                <h1>
+                    <p>ARGENTINA</p>
+                    <p><span>ACTIVISTA</span></p>
+                </h1>
+                <img id="logo" src="img/logo.svg" alt="logoArgentac">
+            </a>
+        </header>
+        <nav>
+            <div id="buscador">
+                <input type="text" name="busqueda" id="busqueda" placeholder="Buscar..." maxlength="25">
+                <button id="lupa"><i class="fas fa-search"></i></button>
+            </div>
+            <ul id="menu_principal">
+                <li><a id="btn_inicio" href="index.html">Inicio</a></li>
+                <li id="ubicacion"><a id="btn_ubicacion">Ubicación <i class="fas fa-angle-down"></i></a>
+                    <ul class="submenu">              
+                        <li class="menu_item"><a onclick="buscarResultados('capitalfederal')">Capital Federal</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('buenosaires')">Buenos Aires</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('cordoba')">Córdoba</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('santafe')">Santa Fé</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('neuquen')">Neuquén</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('catamarca')">Catamarca</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('chaco')">Chaco</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('chubut')">Chubut</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('corrientes')">Corrientes</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('entrerios')">Entre Ríos</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('formosa')">Formosa</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('jujuy')">Jujuy</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('lapampa')">La Pampa</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('larioja')">La Rioja</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('mendoza')">Mendoza</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('misiones')">Misiones</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('rionegro')">Rio Negro</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('salta')">Salta</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('sanjuan')">San Juan</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('sanluis')">San Luis</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('santacruz')">Santa Cruz</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('santiagodelestero')">Santiago del Estero</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('tucuman')">Tucuman</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('tierradelfuego')">Tierra del Fuego</a></li>
+                    </ul>
+                </li>
+                <li id="activismos"><a id="btn_activismos">Activismos <i class="fas fa-angle-down"></i></a> 
+                    <ul class="submenu">
+                        <li class="menu_item"><a onclick="buscarResultados('derechoshumanos')">Derechos Humanos</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('ambiental')">Ambiental</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('feminismo')">Feminista</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('lgbtiq+')">LGBTIQ+</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('veganismo')">Veganismo</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('animalista')">Animalista</a></li>
+                        <li class="menu_item"><a onclick="buscarResultados('cannabico')">Cannábico</a></li>
+                    </ul>
+                </li>
+                <li> <a id="btn_colaboracion" href="colaboracion.html">Colaborar</a></li>
+                <li> <a id="btn_contacto" href="contacto.html">Contactar</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article id="voicot">
+                <h2>Voicot.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: La Plata, Buenos Aires.
+                        <br> <br>
+                        Tipo de Actividad: Informativa-Combativa.
+                        <br> <br>
+                        Tipo de organizacion: Jerárquica.
+                    </p>
+                    <img class="img_max" src="img/Voicot.jpg" alt="voicotLogo">
+                </div>
+                <p class="descripcion_max">Antes fuimos publicistas y fotógrafos, fuimos escritores también, pero ahora somos activistas por los derechos animales, porque no podemos mantenernos ajenos a la tremenda masacre de la que somos parte como sociedad, pero no por un tema de sensibilidad, por un tema de justicia. Somos todo esto, por la acción, la lucha y la liberación.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/somosvoicot" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/somosvoicot" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="https://www.instagram.com/voicot" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="https://www.youtube.com/channel/UC5FSPU9Ex0JyQwuLTnHI2Tg" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="https://www.voicot.com" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="amnistia">
+                <h2>Amnistía Internacional.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Capital federal.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Jerárquica.
+                    </p>
+                    <img class="img_max" src="img/AmnistiaInter.png" alt="amnistiaLogo">
+                </div>
+                <p class="descripcion_max">Amnistía Internacional es un movimiento de más de 7 millones de personas comprometidas para defender a aquellos a quienes se les ha negado justicia o libertad.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/amnistiaar" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/Amnistiainternacionalargentina" target="_blanck"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="https://www.instagram.com/amnistiaar" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="https://www.youtube.com/user/AmnistiaArgentina" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="https://amnistia.org.ar" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="cels">
+                <h2>Cels.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Capital Federal.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Jerárquica.
+                    </p>
+                    <img class="img_max" src="img/CELS.png" alt="celsLogo">
+                </div>
+                <p class="descripcion_max">El Centro de Estudios Legales y Sociales es un organismo de derechos humanos argentino creado en 1979, durante la última dictadura militar, que promueve la protección de los derechos y su ejercicio efectivo, la justicia y la inclusión social, a nivel nacional e internacional.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/CELS_Argentina" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/CELS.Argentina" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="https://www.instagram.com/cels_argentina" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="https://www.youtube.com/user/CELSAUDIOVISUAL" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="https://www.cels.org.ar" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="greenpeace">
+                <h2>Greenpeace argentina.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Capital federal.
+                        <br> <br>
+                        Tipo de Actividad: Informativa-Protestante.
+                        <br> <br>
+                        Tipo de organizacion: Jerárquica.
+                    </p>
+                    <img class="img_max" src="img/greenpeace.png" alt="greenpeaceArgLogo">
+                </div>
+                <p class="descripcion_max">Somos una organización sin fines de lucro, independiente, que no acepta donaciones de gobiernos, empresas o partidos políticos. El trabajo que realizamos es totalmente financiado por más de 3 millones de socios en todo el mundo. Nuestra independencia económica garantiza transparencia y libertad de expresión. Además, permite asumir riesgos y hacer frente a los objetivos comprometiéndonos exclusivamente con los individuos y la sociedad civil.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/GreenpeaceArg" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/GreenpeaceArg" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="https://www.instagram.com/greenpeacearg" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="https://www.youtube.com/user/GreenpeaceArgentina" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="https://www.greenpeace.org/argentina" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="amigos">
+                <h2>Asociación Amigos del Lago de Palermo </h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Capital Federal.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Horizontal.
+                    </p>
+                    <img class="img_max" src="img/AmigosLagoP.JPG" alt="amigosLagoLogo">
+                </div>
+                <p class="descripcion_max">Es una entidad sin fines de lucro cuyo objetivo primario es proteger, defender y mejorar el Parque 3 de Febrero. Entre sus objetivos está el investigar la historia del Parque y todas aquellas situaciones que determinaron el actual estado de degradación del mismo. El comienzo de nuestra actividad se remonta al verano de 1989/90, gestándose a través de un grupo de vecinos que se reunieron espontáneamente y que finalmente el 7 abril de 1990 se constituyeron como Asociación Civil.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="http://amigos-del-lago.blogspot.com" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="bios">
+                <h2>Bios Argentina.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Mar del Plata, Buenos Aires.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Horizontal.
+                    </p>
+                    <img class="img_max" src="img/BiosArg.jpg" alt="biosLogo">
+                </div>
+                <p class="descripcion_max">BIOS es una Asociación Civil sin fines de lucro, creada para la defensa del ambiente hace dos décadas de modo informal, y hace 14 años, institucionalmente. 
+                    BIOS trabaja por la construcción de sociedades en las que la economía, la cultura y la política estén al servicio de la dignidad humana, la equidad, el respeto a la diversidad y el medio ambiente, y por una integración basada en la democracia, la inclusión y la justicia social.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="http://bios.org.ar" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="tinta">
+                <h2>Tinta verde.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: La Plata, Buenos Aires.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Jerárquica.
+                    </p>
+                    <img class="img_max" src="img/TintaVerde.jpg" alt="tintaLogo">
+                </div>
+                <p class="descripcion_max">Somos un colectivo de comunicación socioambiental, surgido en 2008 en la ciudad de La Plata, integrado por estudiantes y graduados/as de periodismo, abogacía y ciencias naturales; además de colaboradores/as de distintas ciudades del país.
+                Nuestro objetivo es generar y difundir material sobre las problemáticas socioambientales, que no suelen circular en los grandes medios comerciales, y que son de vital importancia para identificar las causas de la crisis socioeconómica y ambiental que atraviesa el mundo, en particular América Latina.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/TintaVerde1" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/tintaverde" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="#" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="revuelta">
+                <h2>La revuelta.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Neuquén.
+                        <br> <br>
+                        Tipo de Actividad: Informativa-Protestante.
+                        <br> <br>
+                        Tipo de organizacion: Horizontal.
+                    </p>
+                    <img class="img_max" src="img/LaRevuelta.jpg" alt="revueltaLogo">
+                </div>
+                <p class="descripcion_max">Somos mujeres, que desde este colectivo, nos convertimos en pasajeras que revisitamos los itinerarios de saberes feministas históricamente construidos. Y También pretendemos imprimir nuestras marcas locales en este movimiento político, cuyos aportes han producido efectos tanto en el ámbito de la ciencia como en la vida cotidiana de las mujeres.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/LasRevueltas" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/La-Revuelta-Colectiva-Feminista-627536074073683" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="http://larevuelta.com.ar/" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="colectiva">
+                <h2>Colectiva de antropologas feministas.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Capital Federal.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Horizontal.
+                    </p>
+                    <img class="img_max" src="img/CAF.jpg" alt="cafLogo">
+                </div>
+                <p class="descripcion_max">La Colectiva de Antropólogas Feministas es una asociación de mujeres que plantean una reflexión antropológica y feminista sobre temas de género y sexualidad tanto desde ámbitos académicos como de espacios de activismo y gestión. Para este fin, las CAF configuran un grupo dinámico y adaptable a la diversidad de interlocutores e interlocutoras con quienes dialogar sobre género en su compleja intersección con variables como estado, etnia, sexualidad y clase.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/antropofem" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="http://www.feministasantropo.com.ar" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="digital">
+                <h2>Activismo Feminista Digital.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: La Plata, Buenos Aires.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Horizontal.
+                    </p>
+                    <img class="img_max" src="img/digital.jpg" alt="digitalLogo">
+                </div>
+                <p class="descripcion_max">Somos una organización no gubernamental con sede en La Plata (Provincia de Buenos Aires) y en Ciudad Autónoma de Buenos Aires, Argentina. La Fundación Activismo Feminista Digital plantea el abordaje de diversas temáticas que surgen de la incidencia de las Tecnologías de la Información y la Comunicación en la vida de las mujeres a través del ciberfeminismo</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/FemHackARG?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/femhackARG" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="https://activismofeministadigital.org" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="onda">
+                <h2>Onda Feminista</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Capital Federal.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Jerárquica.
+                    </p>
+                    <img class="img_max" src="img/OndaFeminista.png" alt="ondaLogo">
+                </div>
+                <p class="descripcion_max">Onda Feminista es un medio online que busca impulsar la equidad de género en América Latina.
+                Creamos un espacio para hablar de la realidad con una perspectiva de género, destacar a las brillantes mujeres y organizaciones que están haciendo un cambio positivo, difundir noticias e información mundial de tinte feminista, y, por supuesto,  trabajar por la igualdad de derechos y oportunidades para mujeres y hombres.
+                Onda Feminista se nutre con las ideas e historias de jóvenes de toda Iberoamérica. Nuestros temas son variados y su manejo también, puedes esperar contenido serio, analítico, educativo, ligero, crítico,  y hasta con un toque gracioso.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/onda_feminista" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/ondafeminista" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="https://www.instagram.com/onda_feminista" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="http://ondafeminista.com" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="federacion">
+                <h2>Federación argentina lgbt</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Capital Federal.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Jerárquica.
+                    </p>
+                    <img class="img_max" src="img/FALGBT.jpg" alt="federacionLogo">
+                </div>
+                <p class="descripcion_max">La Federación Argentina LGBT se formó el 28 de junio de 2005, Día Internacional del Orgullo LGBT, como una organización federal, con el compromiso de trabajar para lograr los mismos derechos con los mismos nombres. Nacimos para aunar el esfuerzo desde todas las organizaciones que a lo largo a lo ancho del país conforman la institución para aumentar la capacidad de incidencia social y política del movimiento LGBT.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/FALGBT" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/FALGBT" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="https://www.instagram.com/falgbt" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="http://www.falgbt.org" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="uva">
+                <h2>UVA.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Capital Fedral.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Horizontal.
+                    </p>
+                    <img class="img_max" src="img/UVA.png" alt="uvaLogo">
+                </div>
+                <p class="descripcion_max">La Unión Vegetariana Argentina, fue fundada el 19 de mayo del año 2000, convirtiéndose de esa forma en la primer ONG en Argentina que se creó para promover y difundir exclusivamente el vegetarianismo vegano, edita la primera revista en Hispanoamérica referida a la temática vegana. La UVA abordó el vegetarianismo vegano desde la defensa de los derechos de los animales, destacando además los beneficios que tiene para el cuidado ambiental, la nutrición y la salud.
+                La UVA Unión Vegetariana Argentina, desde su fundación hasta la actualidad siempre difundió el vegetarianismo vegano, resaltando y promoviendo el respeto hacia los Animales, hacia el Planeta y hacia las Personas.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/unionvegana" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="https://www.instagram.com/unionvegana" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="https://www.youtube.com/user/unionvegetarianatv" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="http://www.unionvegana.org/contacto-local" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="coala">
+                <h2>Coala.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Capital Federal.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Horizontal.
+                    </p>
+                    <img class="img_max" src="img/Coala.jpg" alt="Logo">
+                </div>
+                <p class="descripcion_max">Somos una organización de voluntarios sin ánimo de lucro fundada en la Ciudad de La Plata.  nació en Agosto de 2013 y a partir de entonces busca, a través de un activismo constante y comprometido, ponerle fin a la explotación animal.
+                Nuestra misión es concientizar a las personas sobre la grave problemática de la explotación animal, alentarlas a hacerse veganas, acompañarlas en su transición e inspirarlas a involucrarse a través de activismo vegano no violento y efectivo.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/CoalaArg" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://www.facebook.com/activismo.coala" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="http://coala.com.ar" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="mama">
+                <h2>Mama cultiva.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Capital Federal.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Jerárquica.
+                    </p>
+                    <img class="img_max" src="img/MamaCultiva.jpg" alt="mamaLogo">
+                </div>
+                <p class="descripcion_max">Somos una asociación civil sin fines de lucro conformada por madres, cultivadores y profesionales de diversas áreas, cuyos objetivos son cultivar cannabis medicinal en forma individual y comunitaria, promover politicas publicas que permitan y faciliten su uso y bregar por la libre información sobre el tema y por la accesibilidad sin restricciones económicas para quienes necesitan de esta alternativa.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/mamacultivaarg" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="https://es-la.facebook.com/mamacultivaargentina" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="https://www.instagram.com/mamacultivaargentina" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="https://mamacultivaargentina.org" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <article id="cameda">
+                <h2>Cameda.</h2>
+                <div class="info_max">
+                    <p class="datos">
+                        Ubicación: Capital Federal.
+                        <br> <br>
+                        Tipo de Actividad: Informativa.
+                        <br> <br>
+                        Tipo de organizacion: Horizontal.
+                    </p>
+                    <img class="img_max" src="img/cameda.jpg" alt="camedaLogo">
+                </div>
+                <p class="descripcion_max">CAMEDA es una ONG que nuclea a pacientes, médicos, investigadores, entre otros, en la búsqueda de una alternativa terapéutica con cannabis medicinal.
+                Somos una asociación civil cuyo capital social son sus adherentes: pacientes, padres, cannabicultores, profesionales de la salud y del derecho.</p>
+                <div class="contacto">
+                    <a class="boton btn_twitter" href="https://twitter.com/camedaargentina" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a class="boton btn_facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="boton btn_instagram" href="https://www.instagram.com/cameda_argentina" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="boton btn_youtube" href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
+                    <a class="boton btn_web" href="http://cannabismedicinal.com.ar" target="_blank"><i class="fas fa-globe" ></i></a>
+                </div>
+            </article>
+            <div id="configComentario">
+                <div id="datos">
+                    <input type="text" name="nombre" id="usuario" placeholder="Ingrese un nickname" minlength="1" maxlength="10" autocomplete="off" required>
+                    <img id="usuarioFoto" src="img/anonimo.jpeg" alt="usuarioImagen">
+                    <a onclick="abrirGaleria()">Elegir foto</a>
+                </div>
+                <div id="galeria">
+                    <h3>Seleccione una de estas imagenes.</h3>
+                    <div id="opciones">
+                        <img id="imagen1" onclick="setearImagen1()" src="img/icono1.png" alt="eleccion1">
+                        <img id="imagen2" onclick="setearImagen2()" src="img/icono2.png" alt="eleccion2">
+                        <img id="imagen3" onclick="setearImagen3()" src="img/icono3.png" alt="eleccion3">
+                        <img id="imagen4" onclick="setearImagen4()" src="img/icono4.png" alt="eleccion4">
+                        <img id="imagen5" onclick="setearImagen5()" src="img/icono5.png" alt="eleccion5">
+                    </div>
+                </div>
+                <textarea name="comentario" id="cajaComentario" cols="30" rows="3" maxlength="30" placeholder="Escribe tu comentario..."></textarea>
+                <button id="btn_comentar">Comentar</button>
+            </div>
+            <div id="comentarios"></div>
+        </section>
+        <aside>
+            <h3>Organización destacada del mes.</h3>
+            <a class="twitter-timeline" data-lang="es" data-width="70%" data-height="90%" data-theme="light" href="https://twitter.com/MercyForAnimals?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> 
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </aside>
+        <footer>
+            <cite>"Cuestionar nuestras más arraigadas creencias requiere de mucho coraje porque implica aceptar que hemos podido estar equivocados toda la vida".</cite>
+            <p id="autor_frase">David Fischman.</p>
+            <p id="derechos">2019 Derechos reservados. Autor de la pagina <a href="https://github.com/gabit690" target="_blank">Gabit<i class="far fa-hand-peace"></i> </a></p>
+        </footer>
+    </div>
+    <div id="ir-arriba">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <script src="js/all.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/buscador.js"></script>
+    <script src="js/comentarios.js"></script>
+    <script src="js/subir.js"></script>
+</body>
+</html>

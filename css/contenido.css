@@ -4,86 +4,113 @@
     grid-area: contenido;
     min-height: 400px;
     width: 90%;
-    margin: 0% auto;
-    display: flex;
-    flex-flow: column;
-    
+    margin: 4% auto;
     font-family: 'Ubuntu', sans-serif;
 }
 
-section > h2 {
-    padding-top: 5%;
+section > div, section > article {
+    text-align: center;
+}
+
+section > div > h2 {
     font-size: 2.0em;
     text-align: center;
 }
 
-section > h3 {
+section > div > h3 {
     font-size: 1.8em;
     text-align: center;
 }
 
-section > p {
-    padding: 5% 0%;
+section > div > p {
+    padding-top: 3%;
     font-size: 1.0em;
     text-align: justify;
 }
 
-section > img {
+section > div > img {
     width: 70%;
-    align-self: center;
 }
 
 /* Finaliza el contenido de la pagina inicial */
 
-section > .seed {   /* Icono para la busqueda sin resultados */
-    padding-top: 2.5%;
-    font-size: 8.0em;
-    color: #142d4c8c;
-    align-self: center;
-}
 
-/* paginas que muestran resultados de una busqueda */
+/* pagina que muestran resultados de una busqueda */
 
-.info_min > a{
-    margin-bottom: 5%;
-    display: flex;
+#resultados > a{
+    margin: 5% 0%;
+    display: none;
     flex-flow: column;
     align-items: center;
-    border: 4px solid #142d4c;
+    border: 7px double #142d4c;
+    cursor: pointer;
 }
 
-.info_min > a > .descripcion_min {
+#resultados > a > .descripcion_min {
     margin: 2% 0%;
     width: 90%;
     color: black;
 }
 
-.descripcion_min > h4 {
+.descripcion_min > h4{
     text-align: center;
     font-size: 1.5em;
 }
 
-.descripcion_min > p {
+.descripcion_min > p{
     margin-top: 3%;
     font-size: 1.0em;
     text-align: justify;
 }
 
-.info_min > a > .img_min {
+#resultados > a > .img_min {
     margin-bottom: 2%;
     width: 100px;
     height: 100px;
 }
 
-section > .paginador {
-    margin-bottom: 3%;
-    display: flex;
-    justify-content: center;
+#noHayGrupos {
+    display: none;
+    height: 300px;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+#errorBusqueda {
+    display: none;
+    height: 300px;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+#hayResultados, #noHayGrupos, #errorBusqueda{
+    display: none;
+}
+
+#hayResultados>p, #noHayGrupos>p, #errorBusqueda>p{
+    text-align: justify;
+}
+
+#noHayGrupos>.seed, #errorBusqueda>.lupaInvalida{
+    padding-top: 2.5%;
+    font-size: 8.0em;
+    color: #142d4c8c;
+    align-self: center;
+    transition: color 3s;
+}
+
+#noHayGrupos>.seed:hover, #errorBusqueda>.lupaInvalida:hover{
+    color: #1ee494;
+
 }
 
 /* paginas que muestran la informacion de algun resultado seleccionado de la busqueda */
 
-section > .info_max {
+article {
+    display: none;
+}
+
+article > .info_max {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -96,29 +123,31 @@ section > .info_max {
 }
 
 .info_max > .img_max {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
+    padding-bottom: 2%;
 }
 
-section > .descripcion_max {
+article > .descripcion_max {
     font-size: 1.0em;
     text-align: justify;
 }
 
-section > .contacto {
+article > .contacto {
     width: 100%;
-    margin-bottom:5%;
+    padding: 3% 0%;
+    padding-bottom: 0%;
     display: flex;
     justify-content: space-evenly;
 }
 
 .contacto > a {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
     border: 3px solid black;
     border-radius: 50px;
     color: #f3f9fb;
@@ -149,16 +178,135 @@ section > .contacto {
     transition: transform 3s;
 }
 
+#contacto #mensajeEnviado {
+    display:none;
+}
+
+/* Comentarios de los articulos*/
+
+#configComentario {
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 10px auto;
+    background-color: #1ee494;
+}
+
+#configComentario #datos{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    height: 90%;
+    background-color: #22267b;
+}
+
+#datos #usuario{
+    height: 30px;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+#datos #usuarioFoto{
+    width: 60%;
+    height: 150px;
+    background-color: white;
+    overflow: hidden;
+}
+
+#datos a{
+    background-color: #ffa323;
+    padding: 7px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 1s;
+    margin: 10px 0px;
+}
+
+#datos a:hover{
+    background-color:#ff5733;
+}
+
+#configComentario textarea{
+    width: 50%;
+    padding: 20px 10px;
+    resize: none;
+    font-size: 1.5em;
+}
+
+#configComentario button {
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+#galeria {
+    height: 300px;
+    width: 800px;
+    margin-left: 100px;
+    position: absolute;
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #22267b;
+    border: 20px double #1ee494;
+}
+
+#galeria h3{
+    font-size: 2.0em;
+    color: #fff;
+}
+
+#galeria #opciones{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#opciones img{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    cursor: pointer;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: filter 1s;
+    -webkit-transition: filter 1s;
+    -moz-transition: filter 1s;
+}
+
+#opciones img:hover{
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
 
 /* Formularios la pagina */
 
-section > #form_contacto {
-    width: 90%;
-    margin-bottom:3%;
+#contacto {
+    min-height: 400px;
+    width: 100%;
+    margin: 0% auto;
+    display: flex;
+    flex-flow: column;
+}
+
+#contacto > #form_contacto {
+    padding: 10px 20px;
+    padding-bottom: 0px;
     display: flex;
     align-items: center;
     flex-flow: column;
     align-self: center;
+}
+
+#form_contacto input{
+    text-align: center;
 }
 
 #form_contacto > .form_campo {
@@ -171,9 +319,36 @@ section > #form_contacto {
     padding: 1% 2%;
 }
 
-section > #form_colaboracion {
-    width: 90%;
-    margin-bottom:3%;
+#mensajeEnviado {
+    display: flex;
+    height: 250px;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+#mensajeEnviado > p {
+    text-align: justify;
+}
+
+#mensajeEnviado>.carta{
+    padding-top: 2.5%;
+    font-size: 8.0em;
+    color: #142d4c8c;
+    align-self: center;
+    transition: color 3s;
+}
+
+#colaboracion {
+    min-height: 400px;
+    width: 100%;
+    margin: 0% auto;
+    display: flex;
+    flex-flow: column;
+}
+
+#colaboracion > #form_colaboracion {
+    margin: 10px 10px;
+    margin-bottom: 0px;
     display: flex;
     align-items: center;
     flex-flow: column;
@@ -184,6 +359,18 @@ section > #form_colaboracion {
     display: flex;
     flex-flow: column;
     margin-bottom:3%;
+}
+
+#form_colaboracion #agrupacion{
+    text-align: center;
+}
+
+#form_colaboracion #descripcionGrupo{
+    resize: none;
+}
+
+.orga{
+    padding: 15px 0px;
 }
 
 #form_colaboracion > .form_seleccion {
@@ -213,7 +400,7 @@ section > #form_colaboracion {
 }
 
 #form_colaboracion > .form_botones {
-    width: 80%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
 }

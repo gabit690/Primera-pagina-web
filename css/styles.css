@@ -13,6 +13,9 @@ body {
 #principal {
     /* SOLUCIONAR: evitar que se vea el espacio sobrante cuando el contenido vertical de la pagina es menor al tamaño de la pantalla */
     display: grid;
+    min-width: 300px;
+    max-width: 1500px;
+    margin: 0 auto;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "header" "menu" "contenido" "footer";
@@ -23,58 +26,79 @@ body {
 #principal > header {
     grid-area: header;
     font-family: 'Bitter', serif;
-    background: #142d4c;
+    background-color: #22267b;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 160px, 150px 200px, 0px 85px;
+    padding: 10px 5px;
+    text-align: center;
 }
 
-header > #titulo_principal {
-    width: 85%;
-    margin: 0 auto;
-    padding: 3% 0%;
+header > a {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-#titulo_principal > h1 {
-    width: 78%;
+header > a > h1 {
     margin: 0% 0%;
-    text-align: center;
+    display: inline-block;
+    text-align: end;
     color: #f3f9fb;
-    font-size: 10.0vw;
+    font-size: 2.0em;
+    transform: scaleY(1.0);
 }
 
-h1 > span {
-    color: #00b906;
+h1 > p > span {
+    color: #1ee494;
     text-decoration: underline;
 }
 
-#titulo_principal > #logo {
-    width: 20vw;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-}
-
-#titulo_principal > #logo:hover {
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
-    transition: filter 3s;
+header > a > #logo {
+    width: 60px;
+    margin-left: 0px;
 }
 
 /*MENU DE LA PAGINA*/
 
 #principal > nav {
     grid-area: menu;
-    background: #00b906;
+    background: #1ee494;
+}
+
+nav > #buscador {
+    display: flex;
+    justify-content: center;
+    padding: 2% 0%;
+    width: 100%;
+    border-bottom: 3px solid #22267b;
+}
+
+#buscador > #busqueda{
+    padding: 5px 10px;
+}
+
+#buscador > #lupa{
+    padding: 5px 10px;
 }
 
 nav > #menu_principal {
+    width: 100%;
     display: flex;
     flex-flow: column;
     text-align: center;
     font-weight: bold;
+    padding: 0px 0px;
 }
 
 #menu_principal > li, .submenu > li {
-    border-bottom: 3px solid #142d4c73;
+    border-bottom: 3px solid #22267b;
 }
 
 #menu_principal > li > a, 
@@ -82,7 +106,8 @@ nav > #menu_principal {
     display: block;
     padding: 2% 0%;
     font-size: 1.3em;
-    color: #142d4c;
+    color: #22267b;
+    cursor: pointer;
 }
 
 #menu_principal > li > .submenu {
@@ -105,27 +130,34 @@ nav > #menu_principal {
 }
 
 .submenu > li > a:hover {
-    color: #00b906;
+    text-decoration: underline;
 }
 
 /*RED SOCIAL DE LA PAGINA*/
 
 #principal > aside {
-    min-height: 550px;
+    min-height: 400px;
     display: none;
     background: #142d4c8c;
+    padding: 2% 0%;
 }
 
 aside > h3 {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 /*FOOTER DE LA PAGINA*/
 
 #principal > footer {
     grid-area: footer;
-    background: #142d4c;
+    background:
+    linear-gradient(135deg, #a96851 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #a96851 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #a96851 25%, transparent 25%),
+    linear-gradient(45deg, #a96851 25%, transparent 25%);
+    background-size: 90px 90px;
+    background-color: #915b4a;
     font-family: 'Ubuntu', sans-serif;
     color: #f3f9fb;
 }
@@ -136,6 +168,7 @@ footer > cite {
     font-size: .9em;
     text-align: center;
     font-style: italic;
+    font-weight: bold;
 }
 
 footer > #autor_frase {
@@ -153,5 +186,21 @@ footer > #derechos {
 
 #derechos > a {
     font-weight: bold;
-    color: #00b906;
+    color: #1ee494;
+}
+
+body #ir-arriba {
+    display: none;
+    position: fixed;
+    padding: 10px 15px;
+    bottom: 20px;
+    right: 20px;
+    background: #ffa323;
+    color: #ff5733;
+    font-size: 2.0em;
+    border: 7px solid #ff5733;
+    box-shadow: 7px 7px 5px black;
+    border-radius: 40px;
+    cursor: pointer;
+    text-align: center;
 }
